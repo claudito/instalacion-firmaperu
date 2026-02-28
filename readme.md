@@ -1,6 +1,6 @@
 # Guía de Instalación Api Firma Perú
 
-### Requisito
+### Pre Requisito
 Esta implementación usa [7-zip](https://www.7-zip.org/).
 
 Para instalar 7z en **Windows 10/11** seguir los siguientes pasos:
@@ -12,6 +12,7 @@ Para instalar 7z en **Windows 10/11** seguir los siguientes pasos:
       setx PATH "%PATH%;C:\Program Files\7-Zip"
    ```
 
+### Configuración
 
 1. Descargue el ejecutable
    
