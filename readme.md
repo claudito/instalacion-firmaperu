@@ -55,12 +55,8 @@ Para instalar 7z en **Windows 10/11** seguir los siguientes pasos:
     ``` bash
     main
     ```
-
-### Estructura
-
 ---
-
-## ✅ Descripción
+### Estructura del Carpeta
 
 - **public/** → Carpeta de Imágenes
 - **config.properties** → Archivo de configuración.
