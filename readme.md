@@ -16,10 +16,10 @@ https://www.7-zip.org/
 
 2.  La ruta de instalación por defecto es:
 
-```{=html}
-<!-- -->
+``bash
+ C:\Program Files\7-Zip
 ```
-    C:\Program Files\7-Zip
+   
 
 3.  Abrir **CMD (Símbolo del sistema)**.
 
