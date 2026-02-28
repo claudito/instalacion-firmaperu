@@ -1,4 +1,4 @@
-#Guía de Instalación
+# Guía de Instalación
 
 Para instalar 7z en **Windows 10/11** seguir los siguientes pasos:
 1) Descargar e instalar 7z de [aquí](https://www.7-zip.org/)
