@@ -122,7 +122,7 @@ main
 
 ⚠️ **Importante** 
 - `main.exe` debe estar en la misma carpeta que
-`config.properties`.
+`config.properties`. 
 - La carpeta `public` y sus imágenes son
 obligatorias.
 
