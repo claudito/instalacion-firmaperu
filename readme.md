@@ -55,3 +55,20 @@ Para instalar 7z en **Windows 10/11** seguir los siguientes pasos:
     ``` bash
     main
     ```
+
+### Estructura
+
+---
+
+## ✅ Descripción
+
+- **public/** → Carpeta de Imágenes
+- **config.properties** → Archivo de configuración.
+- **main.exe** → Ejecutable principal del instalador.
+
+⚠️ **Importante:**  
+- El archivo `main.exe` debe permanecer en la misma carpeta que `config.properties`.
+- La carpeta public y sus imágenes son obligatorias.
+
+---
+    
