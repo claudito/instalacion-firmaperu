@@ -16,7 +16,7 @@ https://www.7-zip.org/
 
 2.  La ruta de instalación por defecto es:
 
-``bash
+```bash
  C:\Program Files\7-Zip
 ```
    
