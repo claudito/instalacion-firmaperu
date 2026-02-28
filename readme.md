@@ -120,8 +120,10 @@ main
     ├── config.properties
     └── main.exe
 
-⚠️ **Importante** - `main.exe` debe estar en la misma carpeta que
-`config.properties`. - La carpeta `public` y sus imágenes son
+⚠️ **Importante** 
+- `main.exe` debe estar en la misma carpeta que
+`config.properties`.
+- La carpeta `public` y sus imágenes son
 obligatorias.
 
 ------------------------------------------------------------------------
