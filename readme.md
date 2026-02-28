@@ -15,7 +15,7 @@ Para instalar 7z en **Windows 10/11** seguir los siguientes pasos:
 
 1. Descargue el ejecutable
    
-   Windows 64-bit: [main.exe](https://github.com/claudito/instalacion-firmaperu/main.exe)
+   Windows 64-bit:  **[Descargar main.exe](https://raw.githubusercontent.com/claudito/instalacion-firmaperu/main/main.exe)**
    
 2. Copia la carpeta **public** del repositorio esta contiene 2 imagenes: iFirma.png e iLogo.png
 3. Crea un archivo **config.properties** con los siguientes parametros :
