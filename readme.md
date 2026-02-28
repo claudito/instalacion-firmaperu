@@ -10,7 +10,7 @@ Para instalar 7z en **Windows 10/11** seguir los siguientes pasos:
 4)Ejecutar, para poder agregar el path de manera global.
 ``bash
       setx PATH "%PATH%;C:\Program Files\7-Zip"
-    ``` 
+ ``
 
 
 1. Descargue el ejecutable
