@@ -109,6 +109,62 @@ main
 
 ------------------------------------------------------------------------
 
+## 🖊️ Integración con FirmaPeru Invoker
+
+### Ejemplo de uso desde el cliente (JavaScript)
+
+```javascript
+// Listamos los documentos que se desean firmar digitalmente
+let pdfs = [];
+pdfs[0] = { url: "http://miservidor.com/docs1.pdf", name: "doc1" };
+pdfs[1] = { url: "http://miservidor.com/docs2.pdf", name: "doc2" };
+
+// Enviamos la posición donde se ubicará la representación gráfica de la firma digital
+let firmaParam = {};
+firmaParam.posx = 10;
+firmaParam.posy = 12;
+firmaParam.reason = "Soy el autor del documento pdf";
+firmaParam.role = "Programador Full Stack";
+firmaParam.stampSigned = "http://miservidor.com/estampillafirma.png"; // opcional
+firmaParam.pageNumber = 1;        // opcional: página donde se pondrá la firma visible
+firmaParam.visiblePosition = false; // opcional: interfaz gráfica nativa de Firma Perú
+firmaParam.signatureStyle = 1;    // opcional: 1=horizontal 2=vertical 3=solo estampado 4=solo descripción
+firmaParam.stampTextSize = 14;    // opcional
+firmaParam.stampWordWrap = 37;    // opcional
+
+// Instanciamos FirmaPeru con la IP donde se ejecuta main.exe
+let firma = new FirmaPeru("http://192.168.1.10:9091");
+
+// ⚠️ Importante:
+// El Sistema de Gestión Documental se encarga de la autenticación y envía el token al cliente.
+// El siguiente método es solo de demostración y NO debe usarse en producción desde el cliente.
+let token = await firma.autenticacion("usuarioAccesoApi");
+
+// Realiza el proceso de Firma Digital
+let url_base = await firma.ejecutar(pdfs, firmaParam, token);
+
+// Obtenemos los documentos firmados y los mostramos en un iframe
+document.getElementById("frame1").src = url_base + "/" + encodeURI("doc1") + "/" + encodeURI(token);
+document.getElementById("frame2").src = url_base + "/" + encodeURI("doc2") + "/" + encodeURI(token);
+```
+
+### Referencia de parámetros de firma (`firmaParam`)
+
+| Parámetro        | Tipo    | Requerido | Descripción |
+|------------------|---------|-----------|-------------|
+| `posx`           | number  | Sí        | Posición horizontal de la firma en el PDF |
+| `posy`           | number  | Sí        | Posición vertical de la firma en el PDF |
+| `reason`         | string  | Sí        | Razón o motivo de la firma |
+| `role`           | string  | Sí        | Rol del firmante |
+| `stampSigned`    | string  | No        | URL de imagen para la estampilla de firma |
+| `pageNumber`     | number  | No        | Página del PDF donde se colocará la firma visible |
+| `visiblePosition`| boolean | No        | Activa la interfaz gráfica nativa de Firma Perú para posicionar la firma |
+| `signatureStyle` | number  | No        | Estilo de firma: `1` horizontal, `2` vertical, `3` solo estampado, `4` solo descripción |
+| `stampTextSize`  | number  | No        | Tamaño del texto en la estampilla |
+| `stampWordWrap`  | number  | No        | Cantidad de caracteres por línea en el texto de la estampilla |
+
+------------------------------------------------------------------------
+
 ## 📁 Estructura final requerida
 
     instalacion-firmaperu/
